@@ -1,0 +1,20 @@
+body {
+    background-image: url("\assets\images\stage.jpg");
+}
+container {
+    background-color: darkgray;
+}
+img {
+    float: left;
+    height: 152px;
+    width: 152px;
+    padding: 2%;
+    border-right-width: 10px;
+}
+p {
+    padding: 7px;
+}
+.navbar{
+    background-color: grey;
+    color: aqua;
+}
