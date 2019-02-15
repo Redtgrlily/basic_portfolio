@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>RPS</title>
+  </head>
+  <body>
+    <h2>Rock, Paper, Scissors! You are playing against a computer. Click your choice! </h2>
+      <button class = "button" onclick="Rock()">Rock</button>
+      <button class = "button" onclick="Paper()">Paper</button>
+      <button class = "button" onclick="Scissors()">Scissors</button>
+    <script>
+      var rps = ['Rock', 'Paper', 'Scissors'];
+      
+    
+      var wins = 0;
+      var loses = 0;
+      ties = 0;
+      var choice = '';
+      
+
+        function Rock(){
+          var item = rps[Math.floor(Math.random()*rps.length)];
+          document.getElementById("choice").innerHTML = "You chose: Rock";
+          document.getElementById("computer").innerHTML = "The coputer chose: " + item;
+        if(item == 'Rock'){
+          choice = 'Rock';
+          document.getElementById("text").innerHTML = "Tie";
+          ties ++;
+          document.getElementById("ties").innerHTML = "Ties: " + ties;
+        }
+        else if (item == "Paper"){
+          document.getElementById("text").innerHTML = "You lose!";
+          loses ++;
+          document.getElementById("loses").innerHTML = "Loses: " + loses;
+        }
+        else{
+          document.getElementById("text").innerHTML = "You win!";
+          wins ++;
+          document.getElementById("wins").innerHTML = "Wins: " + wins;
+        }
+      }
+      function Paper(){
+        var item = rps[Math.floor(Math.random()*rps.length)];
+        document.getElementById("choice").innerHTML = "You chose: Paper";
+          document.getElementById("computer").innerHTML = "The coputer chose: " + item;
+        choice = 'Paper';
+        if(item == 'Paper'){
+          document.getElementById("text").innerHTML = "Tie";
+          ties ++;
+          document.getElementById("ties").innerHTML = "Ties: " + ties;
+        }
+        else if (item == "Scissors"){
+          document.getElementById("text").innerHTML = "You lose!";
+          loses ++;
+          document.getElementById("loses").innerHTML = "Loses: " + loses;
+        }
+        else{
+          document.getElementById("text").innerHTML = "You win!";
+          wins ++;
+          document.getElementById("wins").innerHTML = "Wins: " + wins;
+        }
+      }
+      function Scissors(){
+        var item = rps[Math.floor(Math.random()*rps.length)];
+        document.getElementById("choice").innerHTML = "You chose: Scissors";
+          document.getElementById("computer").innerHTML = "The coputer chose: " + item;
+        choice = 'Scissors';
+        if(item == 'Scissors'){
+          document.getElementById("text").innerHTML = "Tie";
+          ties ++;
+          document.getElementById("ties").innerHTML = "Ties: " + ties;
+        }
+        else if (item == "Rock"){
+          document.getElementById("text").innerHTML = "You lose!";
+          loses ++;
+          document.getElementById("loses").innerHTML = "Loses: " + loses;
+        }
+        else{
+          document.getElementById("text").innerHTML = "You win!";
+          wins ++;
+          document.getElementById("wins").innerHTML = "Wins: " + wins;
+        }
+      }
+      
+      
+      
+   
+    </script>
+  <p id = "choice">You chose: </p>
+  <p id = "computer">The computer chose:  </p>
+  <p id = "text"></p>
+  <p id = "wins">Wins: </p>
+  <p id = "loses">Loses: </p>
+  <p id = "ties">Ties: </p>
+  </body>
+</html>

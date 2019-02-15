@@ -1,0 +1,11 @@
+Check out codepen.io
+
+https://www.amazon.com/Smarter-Way-Learn-JavaScript-technology-ebook/dp/B00H1W9I6C
+
+http://www.asmarterwaytolearn.com/js/index-of-exercises.html
+
+CTRL J 
+
+
+ask bob about browser data and retaining the same data when you re-open browser!
+

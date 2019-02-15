@@ -1,0 +1,66 @@
+#porttext {
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+}
+h2 {
+    font-family: 'Georgia', Times, Times New Roman, serif;
+}
+.card {
+    max-width: 200px;
+    max-height: 300px;
+    padding: 4px;
+}
+.btn-primary {
+    margin: 0 auto;
+    float: none;
+}
+.container {
+    max-width: 960px;
+    max-height: 980px;
+    border: 5px solid black;
+    float: none; 
+    margin: 0 auto;
+    background-color: #dcddea; 
+}
+#portimage {
+    padding: 5px;
+    max-height: 200px;
+    max-width: 200px;
+    border-color: black;
+    border: 3px solid;
+    margin-right: 4px;
+}
+.col-lg-6 {
+    float: none;
+}
+body {
+    background-image: url(../../assets/images/intersection.png);
+}
+.card-body {
+    background-color: #e3e3e8;
+    border: 1px solid black;
+}
+#portbut {
+    background-color: #4b0c66;
+    color: whitesmoke;
+}
+
+/*media queries - bootstrap homework assignment part 2*/
+
+@media (max-width:980px)  {
+    .container {
+        background-color: lightgrey;
+    }
+}
+@media (max-width:768px)  {
+    .container {
+        background-color: lightblue;
+    }
+}
+@media (min-width:640px)  {
+    h2 {
+        position: static;
+    }
+    .container {
+        background-color: white;
+    }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sake please</title>
+</head>
+<body>
+    <!--
+Create a website (from scratch) that asks users if they eat steak.
+If they respond with "yes", write the following to the page:
+ "Here’s a Steak Sandwich!"
+If they respond with "no", write the following to the page: 
+"Here’s a Tofu Stir-Fry!"
+BONUS:
+HINT:document.write() from a few slides back.
+-->
+    <script>
+    
+    var Steak = confirm("Do you eat steak?");
+    console.log("This person responded whether they like steak? "+" "+Steak);
+
+    var tofu = confirm("Do you like Tofu?")
+    console.log("This person responded whether they like tofu. Answer: "+tofu)
+
+
+    if (Steak) {
+        alert("Here's a Steak sandwich!");
+    } else if (tofu){
+        alert("Here's a Tofu Stir-Fry!");
+    } else
+    document.write("You have confirmed that you do not like steak or tofu. You're lame.")
+
+
+    // var birthday = prompt("How old are you?")
+    // console.log("The user's age is "+birthday)
+
+    var age = prompt("What is your age?");
+
+    if (age >= 21) {
+        document.write("You shall partake.");
+    } else if (age >= 16) {
+        document.write("Ask your parents first.");
+    } else {
+        document.write("Get outta here!")
+    }
+
+
+    // if (birthday >= 21) {
+        // alert("Here's some sake!");
+    // } else if (birthday < 21) {
+        // alert("No sake for you! Scram!");
+    // }
+    // document.write("Don't be breaking the law here, son.");
+
+    </script>
+
+</body>
+</html>
