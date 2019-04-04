@@ -1,26 +1,41 @@
 
-// Pull in required dependencies
-var express = require('express');
-var bodyParser = require('body-parser');
-var path = require('path');
+// ==============================================================================
+// DEPENDENCIES
+// Series of npm packages that we will use to give our server useful functionality
+// ==============================================================================
 
-// Configure the Express application
+var express = require("express");
+
+// ==============================================================================
+// EXPRESS CONFIGURATION
+// This sets up the basic properties for our express server
+// ==============================================================================
+
+// Tells node that we are creating an "express" server
 var app = express();
+
+// Sets an initial port. We"ll use this later in our listener
 var PORT = process.env.PORT || 8080;
 
-// Expose the public directory to access CSS files
-app.use(express.static(path.join(__dirname, './app/public')));
+// express.json and express.urlEncoded make it easy for our server to interpret data sent to it.
+// The code below is pretty standard.
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-// Add middleware for parsing incoming request bodies
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.text());
+// ================================================================================
+// ROUTER
+// The below points our server to a series of "route" files.
+// These routes give our server a "map" of how to respond when users visit or request data from various URLs.
+// ================================================================================
 
-// Add the application routes
-require(path.join(__dirname, './app/routing/apiRoutes'))(app);
-require(path.join(__dirname, './app/routing/htmlRoutes'))(app);
+require("./app/routing/apiRoutes")(app);
+require("./app/routing/htmlRoutes")(app);
 
-// Start listening on PORT
+// ==============================================================================
+// LISTENER
+// The below code effectively "starts" our server
+// ==============================================================================
+
 app.listen(PORT, function() {
-  console.log('Friend Finder app is listening on PORT: ' + PORT);
+  console.log("App listening on PORT: " + PORT);
 });
